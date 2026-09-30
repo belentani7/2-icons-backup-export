@@ -10,6 +10,7 @@
  * ultimo estado bueno en vez de dejar la pantalla vacia. La app nunca debe
  * quedarse en blanco por un fallo de red ajeno.
  */
+import { REPOSITORIES } from '../data/repositories';
 import type { Repository } from '../types';
 
 /** Diagnostico de un repositorio concreto. */
@@ -49,7 +50,7 @@ const EMPTY: BelentaniProfileState = {
   bio: '',
   publicReposCount: 0,
   activeWebsCount: 0,
-  repositories: [],
+  repositories: REPOSITORIES,
   diagnostics: {},
   lastSyncTime: null,
   isLoading: false,
